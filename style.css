@@ -1,0 +1,496 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+/* CABEÇALHO E NAVEGAÇÃO */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logotipo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logotipo img {
+  height: 45px;
+  width: auto;
+  display: block;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333333;
+  font-weight: bold;
+  font-size: 14px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s;
+}
+
+nav a:hover,
+nav a.ativo {
+  color: #f1b82d;
+  border-bottom: 2px solid #f1b82d;
+}
+
+/* BOTÃO PADRÃO */
+.botao-amarelo {
+  background-color: #f1b82d;
+  color: #000000;
+  border: none;
+  padding: 10px 24px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  transition: background 0.3s;
+}
+
+.botao-amarelo:hover {
+  background-color: #d9a320;
+}
+
+/* PÁGINA INICIAL */
+.banner-principal {
+  position: relative;
+  background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('./img/meu-banner.png') center/cover;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  padding: 0 8%;
+  color: #ffffff;
+}
+
+.conteudo-banner {
+  max-width: 500px;
+}
+
+.conteudo-banner h1 {
+  font-size: 38px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.conteudo-banner h1 span {
+  color: #f1b82d;
+  display: block;
+}
+
+.conteudo-banner p {
+  font-size: 13px;
+  margin-bottom: 20px;
+  line-height: 1.4;
+  color: #dddddd;
+}
+
+.resumo-sobre {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 8%;
+  gap: 40px;
+}
+
+.texto-resumo-sobre {
+  flex: 1;
+}
+
+.texto-resumo-sobre h2 {
+  color: #0b3c4d;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.texto-resumo-sobre p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.imagem-resumo-sobre {
+  flex: 1;
+}
+
+.imagem-resumo-sobre img {
+  width: 100%;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.secao-categorias {
+  text-align: center;
+  padding: 40px 8% 60px 8%;
+}
+
+.secao-categorias h2 {
+  color: #0b3c4d;
+  font-size: 22px;
+  margin-bottom: 40px;
+}
+
+.grade-categorias {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.cartao-categoria {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cartao-categoria img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.barra-informativa {
+  background-color: #a0a5aa;
+  color: #ffffff;
+  text-align: center;
+  padding: 12px;
+  font-size: 13px;
+}
+
+/* PÁGINA QUEM SOMOS */
+.detalhes-sobre {
+  display: flex;
+  padding: 60px 8%;
+  gap: 50px;
+  align-items: center;
+}
+
+.imagem-detalhes-sobre {
+  flex: 1;
+}
+
+.imagem-detalhes-sobre img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.texto-detalhes-sobre {
+  flex: 1;
+}
+
+.texto-detalhes-sobre h2 {
+  color: #0b3c4d;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.texto-detalhes-sobre p {
+  font-size: 12px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.secao-compromisso {
+  text-align: center;
+  padding: 40px 8%;
+}
+
+.secao-compromisso h2 {
+  color: #0b3c4d;
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.secao-compromisso p.subtitulo {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.grade-compromisso {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.item-compromisso {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item-compromisso img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.item-compromisso h4 {
+  color: #0b3c4d;
+  font-size: 14px;
+}
+
+.secao-equipe {
+  padding: 40px 8% 60px 8%;
+  text-align: center;
+}
+
+.secao-equipe h2 {
+  color: #0b3c4d;
+  font-size: 22px;
+  margin-bottom: 40px;
+}
+
+.grade-equipe {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.cartao-equipe {
+  text-align: left;
+}
+
+.cartao-equipe img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: top; /* Centraliza o enquadramento no topo/rosto */
+  border-radius: 4px;
+  margin-bottom: 10px;}
+
+
+.cartao-equipe h3 {
+  color: #0b3c4d;
+  font-size: 16px;
+}
+
+.cartao-equipe p.cargo {
+  font-size: 10px;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+.cartao-equipe p.descricao {
+  font-size: 10px;
+  color: #555;
+  line-height: 1.3;
+}
+
+/* PÁGINAS DE PRODUTOS E COLEÇÕES */
+.pagina-produtos {
+  padding: 50px 8% 80px 8%;
+}
+
+.cabecalho-pagina {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.cabecalho-pagina h1 {
+  color: #0b3c4d;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.cabecalho-pagina p {
+  color: #666;
+  font-size: 14px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.grade-produtos-3 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centraliza a última linha incompleta */
+  gap: 35px;
+}
+
+.grade-produtos-3 .item-produto,
+.grade-produtos-3 .cartao-colecao {
+  width: calc(33.333% - 25px); /* Garante no máximo 3 itens por linha */
+  min-width: 250px; /* Evita que os cards fiquem espremidos em telas menores */
+  box-sizing: border-box;
+}
+
+.grade-produtos-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.cartao-colecao {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+}
+
+.cartao-colecao img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.cartao-colecao h3 {
+  color: #0b3c4d;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.cartao-colecao p {
+  font-size: 12px;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.item-produto {
+  text-align: center;
+}
+
+.item-produto img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  background: #fafafa;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.item-produto h3 {
+  color: #0b3c4d;
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.link-voltar {
+  display: inline-block;
+  margin-bottom: 25px;
+  color: #0b3c4d;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.link-voltar:hover {
+  color: #f1b82d;
+}
+
+/* PÁGINA DE CONTATO */
+.pagina-contato {
+  padding: 80px 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 50vh;
+}
+
+.formulario-contato {
+  width: 100%;
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.linha-formulario {
+  display: flex;
+  gap: 20px;
+}
+
+.campo-formulario {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.campo-formulario label {
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.campo-formulario input {
+  background-color: #f1b82d;
+  border: none;
+  padding: 15px;
+  border-radius: 20px;
+  outline: none;
+  font-size: 14px;
+  color: #333;
+}
+
+.formulario-contato .botao-enviar {
+  background-color: #f1b82d;
+  border: none;
+  padding: 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* RODAPÉ */
+footer {
+  background-color: #f1b82d;
+  padding: 30px 8% 15px 8%;
+}
+
+.rodape-topo {
+  display: grid;
+  grid-template-columns: 1.2fr 1.5fr 1.5fr;
+  gap: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  font-size: 11px;
+}
+
+.coluna-rodape h4 {
+  font-size: 12px;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.coluna-rodape p {
+  margin-bottom: 5px;
+  color: #111;
+}
+
+.rodape-baixo {
+  text-align: center;
+  padding-top: 15px;
+  font-size: 10px;
+  color: #222;
+}
